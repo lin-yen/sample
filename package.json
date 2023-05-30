@@ -1,0 +1,73 @@
+{
+  "name": "sample",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "sh dev-tools/check-dev-version.bash && vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint src --ext .ts,.tsx,.vue,.js,.jsx",
+    "lint:style": "stylelint \"./**/*.{css,vue,html,sass,scss}\"  --config .stylelintrc.cjs",
+    "version": "sh dev-tools/version.sh",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "@vitejs/plugin-legacy": "^4.1.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@volar/vue-language-plugin-pug": "^1.6.5",
+    "autoprefixer": "^10.4.14",
+    "check-node-version": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.14.1",
+    "eslint-plugin-vue-pug": "^0.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.24",
+    "postcss-html": "^1.5.0",
+    "postcss-pxtorem": "^6.0.0",
+    "postcss-sass": "^0.5.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.8",
+    "pug": "^3.0.2",
+    "sass": "^1.62.1",
+    "standard-version": "^9.5.0",
+    "stylelint": "^15.10.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "typescript": "5.1.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9",
+    "vite-plugin-ejs": "^1.6.4",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.4.2"
+  },
+  "engines": {
+    "npm": "=9.6.7",
+    "node": "=18.17.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
