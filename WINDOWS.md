@@ -55,15 +55,17 @@ npm start
 ```
 
 ## vscode stylelint 設定
+
+將下方設定貼進 .vscode/settings.json
+
 ```json
-// 將下設定貼進 .vscode/settings.json
 {
-  "stylelint.validate": [
-    "html",
-    "css",
-    "scss",
-    "sass",
-    "vue"
-  ]
+  "stylelint.validate": [
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "vue"
+  ]
 }
 ```
