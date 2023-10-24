@@ -27,3 +27,9 @@ npm install -g commitizen
 # commit
 git cz
 ```
+
+# commit
+git cz
+```
+## Windows 環境設定
+請參考[Windows 環境設定](./WINDOWS.md)
