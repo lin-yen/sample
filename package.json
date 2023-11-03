@@ -9,7 +9,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:template",
-    "lint:js": "eslint src --ext .ts,.tsx,.vue,.js,.jsx",
+    "lint:js": "eslint --cache src --ext .ts,.tsx,.vue,.js,.jsx",
     "lint:style": "stylelint \"./**/*.{css,vue,html,sass,scss}\"  --config .stylelintrc.cjs",
     "lint:template": "vue-tsc --noEmit",
     "version": "sh dev-tools/version.sh",
