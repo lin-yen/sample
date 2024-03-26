@@ -2,6 +2,13 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "christian-kohler.path-intellisense",
+    "syler.sass-indented",
+    "sibiraj-s.vscode-scss-formatter",
+    "stylelint.vscode-stylelint",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag"
   ]
 }

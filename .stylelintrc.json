@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue"
+  ],
+  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties"],
+  "overrides": [
+    {
+      "files": ["**/*.(scss|css|html|vue)"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.(html|vue)"],
+      "customSyntax": "postcss-html"
+    },
+    {
+      "files": ["**/*.sass"],
+      "customSyntax": "postcss-sass"
+    }
+  ],
+  "ignoreFiles": ["dist/**/*", "node_modules/**/*", "server/**/*"],
+  "rules": {
+    "plugin/declaration-block-no-ignored-properties": true
+  }
+}
