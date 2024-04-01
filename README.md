@@ -76,10 +76,16 @@ npm run test:e2e
 npm run lint
 ```
 
-### Lint with [Stylelint](https://stylelint.io/)
+### Lint style with [Stylelint](https://stylelint.io/)
 
 ```sh
 npm run lint:style
+```
+
+### Check types with [vue-tsc](https://www.npmjs.com/package/vue-tsc)
+
+```sh
+npm run type-check
 ```
 
 ### Commit
