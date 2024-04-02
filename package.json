@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npm run dev --git_hash=$(git rev-parse --short HEAD)",
+    "start": "node dev-tools/dev-with-git_hash.cjs",
     "predev": "node dev-tools/check-versions.mjs",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
