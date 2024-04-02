@@ -26,6 +26,10 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Instructions for Developing in a Windows Environment
+
+See [DEV_WINDOWS.md](./DEV_WINDOWS.md)
+
 ## Project Setup
 
 ```sh
@@ -90,7 +94,7 @@ npm run type-check
 
 ### Commit
 
-> 使用 [commitizen](https://github.com/commitizen/cz-cli)，規範格式及內容，以便生成 CHANGELOG
+使用 [commitizen](https://github.com/commitizen/cz-cli) 格式化 commit 訊息，規範 CHANGELOG 內容
 
 ```shell
 # 安裝 commitizen
