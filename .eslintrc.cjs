@@ -10,11 +10,15 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
   ],
-  ignorePatterns: ['dist', 'node_modules'],
+  ignorePatterns: ['dist', 'node_modules', 'components.d.ts'],
   overrides: [
     {
       files: ['cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}', 'cypress/support/**/*.{js,ts,jsx,tsx}'],
       extends: ['plugin:cypress/recommended'],
+    },
+    {
+      files: ['*.html'],
+      parser: 'html-eslint-parser',
     },
   ],
   parserOptions: {
@@ -34,4 +38,5 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     semi: ['error', 'always'],
   },
+  plugins: ['html'],
 };
