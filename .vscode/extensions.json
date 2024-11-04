@@ -9,6 +9,7 @@
     "sibiraj-s.vscode-scss-formatter",
     "stylelint.vscode-stylelint",
     "formulahendry.auto-close-tag",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "mechatroner.rainbow-csv"
   ]
 }

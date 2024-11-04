@@ -60,7 +60,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;

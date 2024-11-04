@@ -19,8 +19,9 @@
       "customSyntax": "postcss-sass"
     }
   ],
-  "ignoreFiles": ["dist/**/*", "node_modules/**/*", "server/**/*"],
+  "ignoreFiles": ["dist/**/*", "node_modules/**/*", "server/**/*", "stats.html", "coverage/**/*"],
   "rules": {
-    "plugin/declaration-block-no-ignored-properties": true
+    "plugin/declaration-block-no-ignored-properties": true,
+    "media-feature-range-notation": "prefix"
   }
 }
