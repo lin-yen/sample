@@ -44,12 +44,12 @@
 ## 安裝 node
 
 ```shell
-# 本專案使用 20.11.0 版 node
-nvm install 20.11.0
+# 本專案使用 22.11.0 版 node
+nvm install 22.11.0
 
 # 檢查 node 及 npm 版本
-node -v # v20.11.0
-npm -v # 10.2.4
+node -v # v22.11.0
+npm -v # 10.9.0
 ```
 
 安裝完成後即可依照 [README.md](./README.md) 說明進行開發。
