@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
 
 console.log('app version:', __APP_VERSION__);
 console.log('git hash:', __GIT_HASH__);

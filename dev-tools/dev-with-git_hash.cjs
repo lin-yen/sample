@@ -1,4 +1,3 @@
-/* eslint-env node */
 const { execSync } = require('child_process');
 
 try {
@@ -6,5 +5,7 @@ try {
 
   execSync(`npm run dev --git_hash=${commitHash}`, { stdio: 'inherit' });
 } catch (error) {
+  console.error(error);
+
   process.exit(1);
 }

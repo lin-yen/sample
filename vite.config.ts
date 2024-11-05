@@ -31,7 +31,8 @@ export default defineConfig(({ mode }) => {
         checker({
           enableBuild: false,
           eslint: {
-            lintCommand: 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts',
+            lintCommand: 'eslint .',
+            useFlatConfig: true,
           },
           typescript: {
             tsconfigPath: './tsconfig.app.json',
