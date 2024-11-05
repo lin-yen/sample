@@ -5,9 +5,11 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import legacy from '@vitejs/plugin-legacy';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
-import eslint from 'vite-plugin-eslint';
 import Components from 'unplugin-vue-components/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import checker from 'vite-plugin-checker';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { compression } from 'vite-plugin-compression2';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -15,6 +17,8 @@ export default defineConfig(({ mode }) => {
 
   const version = `v${process.env.npm_package_version}`;
   const git_hash = process.env.npm_config_git_hash || '?';
+  const showStats = process.env.VITE_SHOW_STATS === 'true';
+  const isTest = process.env.NODE_ENV === 'test';
 
   return {
     plugins: [
@@ -23,8 +27,24 @@ export default defineConfig(({ mode }) => {
         __GIT_HASH__: git_hash,
       }),
       vue(),
+      !isTest &&
+        checker({
+          enableBuild: false,
+          eslint: {
+            lintCommand: 'eslint .',
+            useFlatConfig: true,
+          },
+          typescript: {
+            tsconfigPath: './tsconfig.app.json',
+          },
+          vueTsc: {
+            tsconfigPath: './tsconfig.app.json',
+          },
+          stylelint: {
+            lintCommand: 'stylelint "**/*.{css,scss,vue,sass,html}"',
+          },
+        }),
       vueJsx(),
-      eslint(),
       legacy({
         targets: ['defaults', 'not IE 11'],
       }),
@@ -50,6 +70,9 @@ export default defineConfig(({ mode }) => {
           enabled: false,
         },
       }),
+      !!showStats && visualizer({ open: true, gzipSize: true, brotliSize: true }),
+      compression({ algorithm: 'gzip' }),
+      compression({ algorithm: 'brotliCompress' }),
     ],
     define: {
       __APP_VERSION__: JSON.stringify(version),
@@ -63,6 +86,27 @@ export default defineConfig(({ mode }) => {
     base: '/',
     build: {
       outDir: 'dist',
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules/@vue/')) {
+              return '@vue';
+            }
+
+            if (id.includes('node_modules/vue-router/')) {
+              return 'vue-router';
+            }
+
+            if (id.includes('node_modules/vue-i18n/')) {
+              return 'vue-i18n';
+            }
+
+            if (id.includes('node_modules/pinia/')) {
+              return 'pinia';
+            }
+          },
+        },
+      },
     },
     server: {
       proxy: {

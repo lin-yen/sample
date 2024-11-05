@@ -8,8 +8,21 @@ export default defineConfig((configEnv) =>
     defineConfig({
       test: {
         environment: 'jsdom',
-        exclude: [...configDefaults.exclude, 'e2e/*'],
+        exclude: [...configDefaults.exclude, 'src/e2e/*'],
         root: fileURLToPath(new URL('./', import.meta.url)),
+        coverage: {
+          provider: 'v8',
+          reporter: ['text', 'json', 'html'],
+          exclude: [
+            ...(configDefaults.coverage.exclude || []),
+            '**/e2e/**',
+            '**/models/**',
+            '**/__tests__/**',
+            '**/dev-tools/**',
+            '**/coverage/**',
+            'commitlint.config.cjs',
+          ],
+        },
       },
     }),
   ),
