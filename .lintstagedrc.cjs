@@ -4,5 +4,5 @@ module.exports = {
     return `eslint ${filteredFiles.join(' ')} --report-unused-disable-directives --max-warnings 1`;
   },
   '*.{ts,tsx,vue}': 'npm run type-check',
-  '*.{css,scss,sass,html,vue}': 'npm run lint:style',
+  '*.{css,scss,html,vue}': 'npm run lint:style',
 };

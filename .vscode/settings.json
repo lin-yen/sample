@@ -21,6 +21,15 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "prettier.requireConfig": true,
   "eslint.validate": [
     "html",
@@ -28,8 +37,12 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue"
+    "vue",
+    "json"
   ],
-  "stylelint.validate": ["html", "css", "scss", "sass", "vue"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "stylelint.validate": ["html", "css", "scss", "vue"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
 }

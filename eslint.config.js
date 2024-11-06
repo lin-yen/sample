@@ -4,11 +4,12 @@ import pluginVitest from '@vitest/eslint-plugin';
 import pluginCypress from 'eslint-plugin-cypress/flat';
 import prettierConfig from '@vue/eslint-config-prettier';
 import html from 'eslint-plugin-html';
+import json from 'eslint-plugin-json';
 
 export default [
   {
     name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue,js,jsx,cjs,mjs,cts}'],
+    files: ['**/*.{ts,mts,tsx,vue,js,jsx,cjs,mjs,cts,html,json}'],
   },
 
   {
@@ -54,6 +55,11 @@ export default [
   {
     files: ['**/*.html'],
     plugins: { html },
+  },
+
+  {
+    files: ['**/*.json'],
+    ...json.configs['recommended'],
   },
 
   prettierConfig,

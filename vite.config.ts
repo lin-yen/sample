@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => {
             tsconfigPath: './tsconfig.app.json',
           },
           stylelint: {
-            lintCommand: 'stylelint "**/*.{css,scss,vue,sass,html}"',
+            lintCommand: 'stylelint "**/*.{css,scss,vue,html}"',
           },
         }),
       vueJsx(),
@@ -84,6 +84,14 @@ export default defineConfig(({ mode }) => {
       },
     },
     base: '/',
+    css: {
+      postcss: './postcss.config.cjs',
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
     build: {
       outDir: 'dist',
       rollupOptions: {

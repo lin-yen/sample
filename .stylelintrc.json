@@ -4,24 +4,35 @@
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue"
   ],
-  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties"],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-prettier"
+  ],
   "overrides": [
     {
-      "files": ["**/*.(scss|css|html|vue)"],
+      "files": ["**/*.scss", "**/*.css"],
       "customSyntax": "postcss-scss"
     },
     {
-      "files": ["**/*.(html|vue)"],
+      "files": ["**/*.html"],
       "customSyntax": "postcss-html"
-    },
-    {
-      "files": ["**/*.sass"],
-      "customSyntax": "postcss-sass"
     }
   ],
-  "ignoreFiles": ["dist/**/*", "node_modules/**/*", "server/**/*", "stats.html", "coverage/**/*"],
+  "ignoreFiles": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "server/**/*",
+    "stats.html",
+    "coverage/**/*",
+    "dist-ssr/**",
+    "dev-dist/**"
+  ],
   "rules": {
     "plugin/declaration-block-no-ignored-properties": true,
-    "media-feature-range-notation": "prefix"
+    "media-feature-range-notation": "prefix",
+    "prettier/prettier": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   }
 }
