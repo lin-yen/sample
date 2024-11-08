@@ -69,6 +69,7 @@
     "release-it": "^17.10.0",
     "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.80.6",
+    "semver": "^7.6.3",
     "start-server-and-test": "^2.0.8",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended-vue": "^1.5.0",
@@ -87,10 +88,14 @@
     "vite-plugin-ejs": "^1.7.0",
     "vite-plugin-pwa": "^0.20.5",
     "vitest": "^2.1.4",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.1.10",
+    "workbox-window": "^7.3.0"
   },
   "engines": {
     "npm": "=10.9.0",
     "node": "=22.11.0"
+  },
+  "resolutions": {
+    "meow": "^9.0.0"
   }
 }

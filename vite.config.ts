@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig, loadEnv } from 'vite';
+import { ConfigEnv, defineConfig, loadEnv, Plugin, UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import legacy from '@vitejs/plugin-legacy';
@@ -12,7 +12,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   const version = `v${process.env.npm_package_version}`;
@@ -70,7 +70,7 @@ export default defineConfig(({ mode }) => {
           enabled: false,
         },
       }),
-      !!showStats && visualizer({ open: true, gzipSize: true, brotliSize: true }),
+      !!showStats && (visualizer({ open: true, gzipSize: true, brotliSize: true }) as Plugin),
       compression({ algorithm: 'gzip' }),
       compression({ algorithm: 'brotliCompress' }),
     ],

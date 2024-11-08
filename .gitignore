@@ -34,3 +34,4 @@ package-lock.json
 yarn.lock
 dev-dist
 stats.html
+pnpm-lock.yaml
