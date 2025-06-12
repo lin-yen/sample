@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import legacy from '@vitejs/plugin-legacy';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import Components from 'unplugin-vue-components/vite';
-import { VitePWA } from 'vite-plugin-pwa';
+// import { VitePWA } from 'vite-plugin-pwa';
 import checker from 'vite-plugin-checker';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
@@ -54,25 +54,24 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         directoryAsNamespace: true,
         collapseSamePrefixes: true,
       }),
-      VitePWA({
-        registerType: 'prompt',
-        manifest: {
-          name: 'sample',
-          short_name: 'sample',
-          theme_color: '#ffffff',
-        },
+      // VitePWA({
+      //   registerType: 'prompt',
+      //   manifest: {
+      //     name: 'sample',
+      //     short_name: 'sample',
+      //     theme_color: '#ffffff',
+      //   },
 
-        workbox: {
-          navigateFallbackDenylist: [/^\/api\//],
-        },
+      //   workbox: {
+      //     navigateFallbackDenylist: [/^\/api\//],
+      //   },
 
-        devOptions: {
-          enabled: false,
-        },
-      }),
+      //   devOptions: {
+      //     enabled: false,
+      //   },
+      // }),
       !!showStats && (visualizer({ open: true, gzipSize: true, brotliSize: true }) as Plugin),
-      compression({ algorithm: 'gzip' }),
-      compression({ algorithm: 'brotliCompress' }),
+      compression(),
     ],
     define: {
       __APP_VERSION__: JSON.stringify(version),

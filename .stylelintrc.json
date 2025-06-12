@@ -17,6 +17,10 @@
     {
       "files": ["**/*.html"],
       "customSyntax": "postcss-html"
+    },
+    {
+      "files": ["**/*.css"],
+      "customSyntax": "postcss"
     }
   ],
   "ignoreFiles": [

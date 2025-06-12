@@ -40,7 +40,7 @@
     "vue",
     "json"
   ],
-  "stylelint.validate": ["html", "css", "scss", "vue"],
+  "stylelint.validate": ["html", "css", "scss", "vue", "postcss"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "emmet.includeLanguages": {
     "postcss": "css"

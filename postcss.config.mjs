@@ -1,5 +1,7 @@
+import postcssScss from 'postcss-scss';
+
 const config = {
-  syntax: require('postcss-scss'),
+  syntax: postcssScss,
 
   plugins: {
     'postcss-html': {}, // 處理 HTML 中的 CSS
@@ -13,4 +15,4 @@ if (process.env.NODE_ENV === 'production') {
   config.plugins['cssnano'] = {};
 }
 
-module.exports = config;
+export default config;

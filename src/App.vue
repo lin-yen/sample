@@ -20,7 +20,7 @@ console.log('git hash:', __GIT_HASH__);
   </header>
 
   <RouterView />
-  <ReloadPrompt />
+  <!-- <ReloadPrompt /> -->
 </template>
 
 <style scoped>
