@@ -4,9 +4,9 @@
 <p align="center">
   <a href="https://nodejs.org/en"><img src="https://img.shields.io/badge/node-22.11.0-5FA04E.svg?logo=node.js"></a>
   <a href="https://www.npmjs.com"><img src="https://img.shields.io/badge/npm-10.9.0-CB3837.svg?logo=npm"></a>
-  <a href="https://cn.vitejs.dev"><img src="https://img.shields.io/badge/vite-^5.4.10-646CFF.svg?logo=vite"></a>
+  <a href="https://cn.vitejs.dev"><img src="https://img.shields.io/badge/vite-^6.3.5-646CFF.svg?logo=vite"></a>
   <a href="https://vuejs.org"><img src="https://img.shields.io/badge/Vue-^3.5.12-4FC08D.svg?logo=vue.js"></a>
-  <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Typescript-~5.6.3-2f74c0.svg?logo=typescript"></a> 
+  <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Typescript-~5.8.3-2f74c0.svg?logo=typescript"></a> 
 </p>
 
 This template should help get you started developing with Vue 3 in Vite.
