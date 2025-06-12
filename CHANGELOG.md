@@ -1,4 +1,11 @@
+# Changelog
 
+## <small>0.0.3 (2025-06-12)</small>
+
+* feat: update packages, pwa 預設關閉 ([623129a](https://github.com/lin-yen/sample/commit/623129a))
+* build: support yarn & pnpm ([2f86d7f](https://github.com/lin-yen/sample/commit/2f86d7f))
+* build: use postcss ([5d9327a](https://github.com/lin-yen/sample/commit/5d9327a))
+* docs: update README ([bf93d2e](https://github.com/lin-yen/sample/commit/bf93d2e))
 
 ## <small>0.0.2 (2024-11-05)</small>
 
